@@ -213,3 +213,16 @@ function toggleAuto(){
     clearInterval(autoInterval);
   }
 }
+function openWA(){
+  window.open(
+    "https://whatsapp.com/channel/0029Vb78FqRHLHQatRO8ys2M",
+    "_blank"
+  );
+}
+
+function openTikTok(){
+  window.open("https://tiktok.com/@vern_oza","_blank");
+  score += 50;
+  document.getElementById("score").innerText = score;
+  saveGame();
+    }
