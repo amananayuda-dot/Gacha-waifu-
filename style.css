@@ -175,3 +175,39 @@ button:disabled {
   background: #2ecc71;
   color: #000;
 }
+.social-box{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin: 15px 0;
+}
+
+/* WhatsApp */
+.wa-channel{
+  padding: 12px 22px;
+  background: linear-gradient(135deg,#25D366,#1ebe5d);
+  color: white;
+  font-weight: bold;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(37,211,102,.6);
+  transition: .3s;
+}
+
+/* TikTok */
+.tt-channel{
+  padding: 12px 22px;
+  background: linear-gradient(135deg,#000,#333);
+  color: white;
+  font-weight: bold;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0,0,0,.7);
+  transition: .3s;
+}
+
+.wa-channel:hover,
+.tt-channel:hover{
+  transform: scale(1.06);
+  }
