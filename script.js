@@ -20,8 +20,8 @@ function make(type, count, point, text) {
 const chars = [
   ...make("common",5,1,"Common +1"),
   ...make("rare",6,3,"Rare +3"),
-  ...make("epic",6,10,"Epic +10"),
-  ...make("mitos",5,100,"🔥 MITOS +100 🔥"),
+  ...make("epic",9,10,"Epic +10"),
+  ...make("mitos",10,100,"🔥 MITOS +100 🔥"),
   ...make("rahasia",8,500,"🌊 RAHASIA +500 🌊")
 ];
 
