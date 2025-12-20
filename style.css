@@ -1,0 +1,177 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url("bg.jpg") center/cover no-repeat;
+  z-index: -2;
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+}
+
+.watermark {
+  position: fixed;
+  bottom: 8px;
+  right: 12px;
+  font-size: 12px;
+  opacity: .35;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.app {
+  padding: 16px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 6px;
+}
+
+button.reset {
+  background: #aa3333;
+  color: white;
+}
+
+button:disabled {
+  opacity: .5;
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.card {
+  aspect-ratio: 1/1;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 3px solid;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.locked img {
+  filter: brightness(0.05) blur(2.5px);
+}
+
+.common { border-color: #8b5a2b; }
+.rare { border-color: #2b7cff; }
+.epic { border-color: #9b3bff; }
+.mitosB { border-color: red; }
+.rahasiaB { border-color: #7fffd4; }
+
+.result-box {
+  width: 240px;
+  margin: 16px auto;
+}
+
+.result-box img {
+  width: 100%;
+  border-radius: 16px;
+  display: none;
+}
+
+/* ===================== */
+/* RAHASIA OVERLAY */
+/* ===================== */
+.secret-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.secret-card {
+  width: 260px;
+  animation: secretAppear 1.2s ease-out forwards;
+}
+
+.secret-card img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 0 40px #7fffd4;
+}
+
+@keyframes secretAppear {
+  0% { transform: scale(0.3); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.secret-explode {
+  animation: explode .5s ease-out forwards;
+}
+
+@keyframes explode {
+  to { transform: scale(1.4); opacity: 0; }
+}
+
+#particleCanvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.roulette {
+  animation: roulettePulse .15s infinite;
+}
+
+@keyframes roulettePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.mitos {
+  animation: shake .25s 6, glowRed 1.2s infinite;
+  box-shadow: 0 0 35px red;
+}
+
+@keyframes shake {
+  0%{transform:translateX(0)}
+  25%{transform:translateX(-6px)}
+  50%{transform:translateX(6px)}
+  75%{transform:translateX(-6px)}
+  100%{transform:translateX(0)}
+}
+
+@keyframes glowRed {
+  0%{filter:brightness(1)}
+  50%{filter:brightness(1.6)}
+  100%{filter:brightness(1)}
+}
+
+#autoBtn {
+  background: #444;
+  color: #fff;
+}
+
+#autoBtn.active {
+  background: #2ecc71;
+  color: #000;
+}

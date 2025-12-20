@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gacha Waifu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="watermark">tiktok.com/@vern_oza</div>
+
+<div class="app">
+  <h1>🎰 Gacha Waifu</h1>
+  <p>Skor: <span id="score">0</span></p>
+
+  <button id="spinBtn" onclick="spin()">SPIN</button>
+  <button class="reset" onclick="resetGame()">RESET</button>
+<button id="autoBtn" onclick="toggleAuto()">AUTO SPIN 🔒</button>
+
+  <div class="result-box">
+    <img id="resultImg">
+    <p id="resultText">Tekan SPIN</p>
+  </div>
+
+  <h2>📖 Index</h2>
+  <div id="index" class="index-grid"></div>
+</div>
+
+<!-- RAHASIA OVERLAY -->
+<div id="secretOverlay" class="secret-overlay">
+  <div class="secret-card">
+    <img id="secretImg">
+  </div>
+  <canvas id="particleCanvas"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
