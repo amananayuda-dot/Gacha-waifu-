@@ -211,3 +211,74 @@ button:disabled {
 .tt-channel:hover{
   transform: scale(1.06);
   }
+  .rahasia {
+  animation: shake .25s 6, glowRed 1.2s infinite;
+  box-shadow: 0 0 35px #7fffd4;
+}
+
+  @keyframes secretExplode {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+    filter: brightness(3);
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: brightness(2);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes secretGlow {
+  0% {
+    box-shadow: 0 0 10px #7fffd4;
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 45px #7fffd4;
+    filter: brightness(1.6);
+  }
+  100% {
+    box-shadow: 0 0 10px #7fffd4;
+    filter: brightness(1);
+  }
+}
+
+  /* === RAHASIA LEDAK === */
+.rahasia-explode {
+  animation: explode .6s ease-out forwards;
+  filter: brightness(2);
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(.3);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* === RAHASIA MODE STABIL (KAYA MITOS) === */
+.rahasia {
+  animation: shake .25s infinite, glowBlue 1.2s infinite;
+  box-shadow: 0 0 40px #7fffff;
+}
+
+/* glow biru muda */
+@keyframes glowBlue {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.6); }
+  100% { filter: brightness(1); }
+}
