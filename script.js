@@ -70,8 +70,8 @@ function spin(){
     let pool;
     if(r < 50000) pool = chars.filter(c=>c.type==="common");
     else if(r < 75000) pool = chars.filter(c=>c.type==="rare");
-    else if(r < 80000) pool = chars.filter(c=>c.type==="epic");
-    else if(r < 91000) pool = chars.filter(c=>c.type==="mitos");
+    else if(r < 89000) pool = chars.filter(c=>c.type==="epic");
+    else if(r < 99000) pool = chars.filter(c=>c.type==="mitos");
     else pool = chars.filter(c=>c.type==="rahasia");
 
     const pick = pool[Math.floor(Math.random() * pool.length)];
