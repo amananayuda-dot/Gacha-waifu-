@@ -22,7 +22,7 @@ const chars = [
   ...make("rare",8,3,"Rare +3"),
   ...make("epic",9,10,"Epic +10"),
   ...make("mitos",17,100,"🔥 MITOS +100 🔥"),
-  ...make("rahasia",11,500,"🌊 RAHASIA +500 🌊")
+  ...make("rahasia",21,700,"🌊 RAHASIA +500 🌊")
 ];
 
 const saved = JSON.parse(localStorage.getItem("unlocked")||"[]");
