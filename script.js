@@ -259,3 +259,18 @@ function openTikTok(){
   document.getElementById("score").innerText = score;
   saveGame();
     }
+
+function tambahPoinGacha() {
+    // 1. Ambil skor yang ada sekarang
+    let currentScore = parseInt(document.getElementById("score").innerText) || 0;
+    
+    // 2. Tambahkan 500 poin
+    let newScore = currentScore + 500;
+    
+    // 3. Masukkan skor baru ke layar
+    document.getElementById("score").innerText = newScore;
+    
+    // 4. Update data ke sistem game lu (jika game lu pakai localStorage)
+    
+    alert("Selamat! +500 Skor berhasil ditambahkan!");
+}
